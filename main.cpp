@@ -75,5 +75,5 @@ double time_test(void (*ptr)()) {
 int main() {
     double time_taken = 0;
     for (int i = 0; i < CYCLES; ++i) time_taken += time_test(&process_approach);
-    printf("Time taken: %fs\n", time_taken);
+    printf("Time taken for each cycle: %fms", time_taken / CYCLES * 1000);
 }
