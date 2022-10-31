@@ -1,13 +1,13 @@
 #include <time.h>
-#include <iostream>
 #include <fstream>
 #include <string>
 #include <unistd.h>  // getpid
 #include <sys/wait.h>  // wait
 #include <thread>
 using namespace std; 
-#define N 20 // matrix rang
-#define S 2 // matrix amount, file for each
+#define N 20  // matrix rang
+#define S 2  // matrix amount, file for each
+#define CYCLES 10  // repeat time_test x times from main 
 
 void multiply(int arr1[][N], int arr2[][N], int arr3[][N]) {
     for(int i = 0; i < N; i++){
@@ -73,8 +73,7 @@ double time_test(void (*ptr)()) {
 }
 
 int main() {
-    int cycles = 10;
     double time_taken = 0;
-    for (int i = 0; i < cycles; ++i) time_taken += time_test(&process_approach);
+    for (int i = 0; i < CYCLES; ++i) time_taken += time_test(&process_approach);
     printf("Time taken: %fs\n", time_taken);
 }
