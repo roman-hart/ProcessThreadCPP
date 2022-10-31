@@ -1,7 +1,7 @@
 #include <time.h>
 #include <fstream>
 #include <string>
-#include <unistd.h>  // getpid
+#include <unistd.h>  // getpid, replace with <process.h> for Windows
 #include <sys/wait.h>  // wait
 #include <thread>
 using namespace std; 
