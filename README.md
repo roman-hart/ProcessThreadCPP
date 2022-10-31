@@ -15,13 +15,11 @@ Standart libraries: time.h (has relative accuracy), fstream, string, thread.
 Change general variables <i>N, S, CYCLES</i> to test a particular configuraiton. Compile the program and run `main.exe` file. <br>
 Program output will be saved to `output.txt` file. <br>
 
-# Results
+# Results, ms for each cycle (CYCLES = 100)
 
 Thread approach:
 
-CYCLES \ S             | 2 | 3 | 4
-------------- | ------------- | ----|---------
-1             | L  | Unif | 
-2             | Square  | Un | 
-5             | Fib  | Un |
-10             | Are  | Gamma | 
+S             | 2 | 3 | 4
+------------- | ----- | ----|----
+Thread approach       | 0.91ms | 1.00ms | 1.29ms
+Process approach      | 0.22ms | 0.30ms | 0.32ms
