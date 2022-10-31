@@ -7,7 +7,7 @@
 
 OS-specific library: <unistd.h> and <sys/wait.h> for POSIX systems. For Windows: replace it wih <process.h> and <windows.h>, than replace fork(), wait(), gettpid() with CreateProcess(), WaitForSingleObject(), GetCurrentProcessId().
 
-Standart libraries: <time.h> (has relative accuracy), <fstream>, <string>, <thread>.
+Standart libraries: time.h (has relative accuracy), fstream, string, thread.
 
 
 # Usage
